@@ -1,0 +1,131 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: no-repeat center url(/Sidebar/images/leopardus.png);
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: Lato;
+}
+.container
+{
+    position: relative;
+    width: 300px;
+    height: 120vh;
+    background-color: rgba(0, 0, 0, 0.479);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.548);
+    left: -325px;    
+    transition: 0.5s;
+}
+
+.company
+{
+    width: 100%;
+    height:  95px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.548);
+
+}
+.company a{
+    text-decoration: none;
+    color: white;
+    position: absolute;
+    left: 70px;
+    top: 40px;
+    font-size: 45px;
+    font-weight: bold;
+}
+.menu
+{
+    position: absolute;
+    width: 100%;
+    margin-top: 10px;
+}
+.menu a 
+{
+    display: block;
+    padding: 10px 0 10px 15px;
+    margin-top: 20px;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    transition: 0.2s linear;
+}
+.menu i 
+{
+    margin-right: 5px;
+}
+.menu a:hover
+{
+    border-left: white;
+    box-shadow: 0 0 10px yellow;
+    transition: 0.1s linear;
+}
+.media
+{
+    bottom:  76px;
+    position: absolute;
+    left : 50%;
+    transform: translateX(-50%);
+    width: 100%;
+}
+.media i 
+{
+    padding-left: 29px;
+    font-size: 25px;
+    cursor: pointer;
+    color: white;
+    transition: 100ms linear;
+}
+.media .fa-facebook:hover
+{
+    color: blue;
+    font-size: 39px;
+}
+.media .fa-twitter:hover{
+    color: lightblue;
+    font-size: 39px;
+}
+.fa-instagram:hover
+{
+    color: pink;
+    font-size: 39px;
+}
+.fa-youtube:hover
+{
+    color: red;
+    font-size: 39px;
+}
+.button_open
+{
+    z-index: 1;
+    position: absolute;
+    font-size: 50px;
+    color: white;
+    top: 30px;
+    left: 5px;
+    
+
+}
+.button_close
+{
+    z-index: 1;
+    position: absolute;
+    font-size: 40px;
+    color: white;
+    top: 42px;
+    right: 12px;
+    visibility: hidden;
+   
+}
+#check:checked ~ .container
+{
+  transform: translateX(325px);
+}
+#check:checked ~ .container .button_close
+{
+    visibility: visible;
+}
+#check:checked ~ .button_open
+{
+    display: none;
+}
